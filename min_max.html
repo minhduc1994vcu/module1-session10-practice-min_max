@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    for (let i = 0; i < 100; i++) {
+        arr[i] = Math.floor(Math.random() * 101);
+
+        if (i % 10 === 9) {
+            arr[i] += "<br>"
+        }
+    }
+    document.write(arr.join(" "));
+
+    function findMin(arr) {
+        var min = arr[0];
+        for (var i = 1; i < arr.length; ++i) {
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+        }
+        return min;
+    }
+
+    function findMax(arr) {
+        var max = arr[0];
+        for (var i = 1; i < arr.length; ++i) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        return max;
+    }
+
+    document.write("the min value is: " + findMin(arr));
+    document.write("<br>")
+    document.write("the max value is: " + findMax(arr));
+
+    // let arr = [];
+    // let result = " ";
+    //     for (let i = 0; i < 100; i++) {
+    //         arr[i] = Math.floor(Math.random() * 101);
+    //         if (i!==0) {
+    //             result += "  "
+    //         }
+    //         result += arr[i];
+    //         if (i % 10 ===9 ) {
+    //             result += "<br>"
+    //         }
+    //     }
+    // document.write(result);
+
+</script>
+</body>
+</html>
